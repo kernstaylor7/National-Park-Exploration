@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>US National Parks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  
+</head>
+
+<body style="background-color:black;"> <!--Changes overall background to black-->
+
+<body>
+  
+  <div class="wrapper">
+    <nav class="navbar navbar-default" style="background-color:black;"><!--Changes Nav Bg to Black-->
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="Act1.html"> Explore Activites</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero text-center"> <!-- Animation for Title-->
+      <h1>US National Parks</h1> <!--Main Title-->
+      <p>Explore & Adventure</p> <!--Subtitle-->
+    </div>
+        
+    <div class="container"> <!--Set up for container for filter box-->
+      <div class="row margin-top-50">
+        <div class="col-md-2"> <!--size of container for filter box-->
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading" style="background-color:black;"></div>
+              <div class="panel-body">
+                <form style="background-color:black;"> 
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item" style="background-color:black;">
+                        <label for="date">Enter Activity</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="i.e. Fishing">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default" style="background-color:black;">Filter Table</button>
+                  <script>$("#filter-btn").click(function(){alert("Click OK to view your filtered Activity Results");});</script> <!--JQuery addition :)-->
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10"> <!--Set up/size for container for data-->
+          <div id="table-area" class="">
+            <table id="activity-table" class="table table-hover"> <!--highlights row thats hovered-->
+              <thead>
+                <tr>
+                  <th class="table-head">Activity</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Category</th>
+                  <th class="table-head">Park</th>
+                  <th class="table-head">Area Name</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">Project-2-National-Parks: Allen, Kerns, Robles</span>
+    </footer>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/apps.js"></script>
+</body>
+
+</html>
