@@ -1,0 +1,52 @@
+Create Table astronomy(Category varchar(70), Park varchar(100), Area varchar(70), State varchar(5))
+Create Table camping(Category varchar(70), Park varchar(100), Area varchar(70), State varchar(5))
+Create Table auto_atv(Category varchar(70), Park varchar(100), Area varchar(70), State varchar(5))
+Create Table hiking(Category varchar(70), Park varchar(100), Area varchar(70), State varchar(5))
+
+SELECT DISTINCT hiking.park, auto_atv.park, astronomy.park, camping.park, fishing.park
+FROM hiking
+JOIN auto_atv
+ON hiking.park = auto_atv.park
+JOIN astronomy
+ON hiking.park = astronomy.park
+JOIN camping
+ON hiking.park = camping.park
+JOIN fishing
+ON hiking.park  = fishing.park;
+
+
+SELECT park,
+COUNT(park) AS "frequency"
+FROM hiking 
+GROUP BY park
+ORDER BY
+COUNT(park) DESC;
+
+SELECT park,
+COUNT(park) AS "frequency"
+FROM fishing 
+GROUP BY park
+ORDER BY
+COUNT(park) DESC;
+
+SELECT park,
+COUNT(park) AS "frequency"
+FROM camping
+GROUP BY park
+ORDER BY
+COUNT(park) DESC;
+
+SELECT park,
+COUNT(park) AS "frequency"
+FROM auto_atv 
+GROUP BY park
+ORDER BY
+COUNT(park) DESC;
+
+SELECT park,
+COUNT(park) AS "frequency"
+FROM astronomy
+GROUP BY park
+ORDER BY
+COUNT(park) DESC;
+
