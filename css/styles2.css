@@ -75,39 +75,9 @@ h4, .h4 {
   }
 }
 
-
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-}
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-small, .small {
-  font-size: 0.875em;
-}
-
-sub,
-sup {
-  position: relative;
-  font-size: 0.75em;
-  line-height: 0;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-output {
-  display: inline-block;
 }
 
 .img-fluid {
@@ -288,7 +258,7 @@ output {
   max-height: var(--bs-scroll-height, 75vh);
   overflow-y: auto;
 }
-}
+
 
 .tooltip {
   position: absolute;
@@ -799,6 +769,7 @@ output {
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
+
 .meet-section {
   padding-top: 5rem;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");
